@@ -1,0 +1,30 @@
+Concepts
+API:
+Application Programming Interface
+
+REST:
+Representational State Transfer is an arquitecture
+they make use the resources -based on url's end point 
+they use http methods(get post delete put)
+they use http status code(200 ,400 etc)
+
+HTTP Methods
+POST: Create a and store something
+GET: Reading or retrieving a list of things
+PUT: Update or editing and existing thing
+DELETE: Delete something
+
+To post and get we use the same url http://www.ninja.com/api/ninjas
+to put and delete we can use the same url http://www.ninja.com/api/ninjas/id
+
+how we handle a http request
+app.method_name(router(could be /, /ninjas ect), callback(req,res){
+	body .....
+})
+example 
+app.get(/api, function(req, res){
+	res.send(Hola mundo);
+});
+
+Middleware is all the code in between the input and the output
+body-parser access to the request's body , parse it and anttached to the request letting us to have access to the data coming in the request's body 
